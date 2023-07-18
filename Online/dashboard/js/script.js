@@ -137,7 +137,7 @@ import { getID } from "../../data/js/authState.js";
         prevFooter.innerHTML = (`
             <button class="action" id="icon-join_group">${lang.join_group}</button>
             <button class="action" id="icon-create_group">${lang.create_group}</button>
-            <button class="action" id="icon-reset-password">${lang.resetpass}</button>
+            
         `);
 
         userLocale.action.changePage('dashboard_groups');
@@ -151,18 +151,7 @@ import { getID } from "../../data/js/authState.js";
             msg: 'Group ID:',
             onyes: (res) => searchGroup(res)
         });
-        prevFooter.querySelector('#icon-reset-password').onclick = () => 
-            sendPasswordResetEmail(auth, auth.currentUser.email)
-            .then(() => {
-            // Password reset email sent!
-            popup.alert("Password reset email sent!");
-            // ..
-            })
-            .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // ..
-            });
+        
             
         const searchGroup = async (id) => {     // Search group function
 

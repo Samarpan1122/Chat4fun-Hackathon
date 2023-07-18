@@ -1,7 +1,7 @@
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js";
-        import { getAuth, signInWithEmailAndPassword , signInWithPopup, GoogleAuthProvider, updatePassword } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js";
+        import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail, signInWithPopup, GoogleAuthProvider, updatePassword } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js";
         import { firebaseConfig } from '/Online/data/js/config.js';
         import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
         const provider = new GoogleAuthProvider();
@@ -78,8 +78,12 @@ submitBtn.addEventListener("click", (e) => {
     .then((userCredential) => {
       // User is signed in
       const user = userCredential.user;
+      if (!user.emailVerified) {
+        alert("Please verify your email before logging in.");
+      } else {
       // Redirect to home page
       window.location.href = "dashboard/";
+      }
     })
     .catch((error) => {
       const errorCode = error.code;

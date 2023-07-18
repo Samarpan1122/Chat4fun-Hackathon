@@ -1048,7 +1048,7 @@ import { getID } from "../../data/js/authState.js";
 
                 let savedText = textarea.value;
 
-                const apiKey = "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";
+                const apiKey = "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";
                 const preText = 
                 "I will give you text,you just have to reply 'yes' if you find it offesive or abusive or something that is kind of cyberbullying or any type of racisms like calling fat or black person/boy etc and anything you find like cyberbyllying,else reply 'no'.,bye is not an offensive of abusive or cyberbullying word,so you can reply 'no' for that. "; //pretext for chatbot
                 const response = await axios.post(

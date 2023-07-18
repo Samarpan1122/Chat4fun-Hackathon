@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js";
-import { getAuth, updateProfile,createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js";
+import { getAuth, updateProfile,createUserWithEmailAndPassword, sendEmailVerification } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js";
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js";
 import { firebaseConfig } from '/Online/data/js/config.js';
     // Your web app's Firebase configuration
@@ -43,6 +43,7 @@ set(ref(db,"user/" + user.uid), {
     })
     .then(() => {
       console.log("Data added successfully");
+      sendEmailVerification(auth.currentUser)
       window.location.href = "loginOn.html";
       })
       .catch((error) => {

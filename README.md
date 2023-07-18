@@ -1,6 +1,6 @@
 For Hacakthon (Syntax v7.1)
 Simple fun and safe Chatting app for friends.
-```
+
 ## Features
 - [x] Block Abusive Language, Cyberbullying text, Inappropriate words and etc.
 - [x] Group Chatting
@@ -18,9 +18,9 @@ Database: Firebase
 Framework: Bootstrap
 For Checking The text is abusive or not: text-davinci-003
 
-Parts of Code Used From: https://github.com/aladinyo/WhatsappyApp/tree/main , https://github.com/RickyFrancis/whatsapp-clone , 
+Parts of Code Used From: https://github.com/aladinyo/WhatsappyApp/tree/main
 
-For Online demo click here: https://chat4funh.netlify.app/
+For Online demo click here: https://chat4fun.me
 
 To run LAN version:
 1. Download the zip file
@@ -32,7 +32,8 @@ To run LAN version:
 7. Chat without internet and safe
 
 made by:
-- [x] Samarpan Mohanty(Leader) 
-- [x] Shyamal Dubey
+- Samarpan Mohanty(Leader) 
+- Shyamal Dubey
 - Class: 12
 - School: Delhi Public School, Faridabad, Haryana, India
+- for any queries contact on samarpanmohanty3347@chat4fun.tech or samarpanmohanty3347@gmail.com
