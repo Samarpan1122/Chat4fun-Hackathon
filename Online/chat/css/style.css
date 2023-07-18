@@ -1,0 +1,662 @@
+:root {
+  --untai-kita: #404346;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--bs6);
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+header h1 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -2px;
+  left: 50%;
+  font-size: 18px;
+  transform: translate(-50%);
+}
+header h1 img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+header button {
+  background-color: transparent;
+  color: var(--bs1);
+  font-size: 24px;
+  margin-top: -5px;
+}
+
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  max-height: 57px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+footer .send-button {
+  width: 40px;
+  height: 40px;
+  padding-bottom: 2px;
+  font-size: 18px;
+  background-color: var(--bs2);
+  color: white;
+  border-radius: 50%;
+}
+footer .inputs {
+  background-color: var(--bs5);
+  box-shadow: inset 0 0 10px;
+  width: calc(100% - 55px);
+  height: 36px;
+  max-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: 0 5px 3px 5px;
+}
+footer .inputs button {
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  color: black;
+}
+footer .inputs textarea {
+  background-color: transparent;
+  width: calc(100% - 96px);
+  color: black;
+  resize: none;
+  height: 20px;
+  max-height: 34px;
+}
+footer .inputs textarea::-moz-placeholder {
+  color: var(--bs1);
+}
+footer .inputs textarea:-ms-input-placeholder {
+  color: var(--bs1);
+}
+footer .inputs textarea::placeholder {
+  color: var(--bs1);
+}
+footer .inputs textarea::-webkit-scrollbar {
+  width: 5px;
+}
+footer .inputs textarea::-webkit-scrollbar-thumb {
+  background-color: var(--c-blue);
+}
+footer .inputs textarea::-webkit-scrollbar-track {
+  background-color: #272b30;
+}
+
+main {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  bottom: 40px;
+  left: 0;
+  padding: 5px 5px 0 5px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-weight: lighter;
+  scroll-behavior: smooth;
+}
+main .scroll-button {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--bs3);
+  color: white;
+  bottom: 130px;
+  left: 10px;
+}
+main .show-all {
+  background-color: transparent;
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 5px 0;
+  border: 1px solid var(--bs2);
+  cursor: pointer;
+}
+main .show-all.nopoint {
+  cursor: default;
+}
+main .show-all.nopoint i {
+  color: var(--bs2);
+}
+main .card-chat {
+  padding: 5px 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 300px;
+  min-width: 100px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+main .card-chat .sender {
+  display: flex;
+  flex-direction: column;
+}
+main .card-chat .sender .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .card-chat .sender .top p {
+  font-size: 12px;
+  font-weight: bold;
+}
+main .card-chat .sender .top .option {
+  margin-left: 20px;
+}
+main .card-chat .sender .top button {
+  background-color: transparent;
+  color: var(--bs1);
+  font-size: 16px;
+}
+main .card-chat .sender div.replied {
+  position: relative;
+  font-size: 12px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-left: 2px solid var(--bs2);
+  border-radius: 5px;
+}
+main .card-chat .sender div.replied .line {
+  width: 2px;
+  height: 38px;
+  background-color: var(--bs6);
+  border-radius: 4px;
+}
+main .card-chat .sender div.replied .from {
+  margin-left: 4px;
+}
+main .card-chat .sender div.replied .from .re-name, main .card-chat .sender div.replied .from .re-desc {
+  font-style: italic;
+  color: var(--bs2);
+}
+main .card-chat .sender div.replied .from .re-name {
+  font-weight: bold;
+}
+main .card-chat .sender div.replied .re-image {
+  margin-left: 4px;
+  width: 38px;
+  height: 38px;
+  border-radius: 5px;
+  background-image: url(../../data/img/error_image.jpg);
+  background-size: cover;
+  background-position: center;
+}
+main .card-chat .sender .middle {
+  position: relative;
+  margin-bottom: 3px;
+}
+main .card-chat .sender .middle .picture {
+  position: relative;
+  background-color: var(--bs5);
+  max-width: 300px;
+  max-height: 169px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .card-chat .sender .middle .picture img {
+  max-width: 300px;
+  max-height: 169px;
+  cursor: pointer;
+}
+main .card-chat .sender .middle p {
+  font-size: 14px;
+  font-weight: bolder;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+main .card-chat .sender .middle p .c-yellow {
+  color: red;
+}
+main .card-chat .sender .bottom {
+  font-size: 12px;
+  display: flex;
+}
+main .card-chat .sender .bottom p.edited {
+  margin-left: 10px;
+  font-style: italic;
+}
+main .card-chat .sender .bottom p.time {
+  color: black;
+}
+main .card-chat.our {
+  -webkit-animation: animationPack 0.5s;
+          animation: animationPack 0.5s;
+  margin-left: auto;
+  background-color: var(--bs6t);
+  color: black;
+}
+main .card-chat.their {
+  -webkit-animation: animationPackme 0.5s;
+          animation: animationPackme 0.5s;
+  margin-right: auto;
+  background-color: var(--bs3t);
+  color: black;
+}
+main .card-chat.their .sender .bottom {
+  display: flex;
+  justify-content: right;
+}
+
+.Emoji-Attach {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bs6t);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  padding: 10px;
+  width: calc(100% - 10px);
+  max-width: 345px;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-break: break-word;
+  border: 2px solid var(--bs2);
+}
+.Emoji-Attach span {
+  display: inline-block;
+  margin: 3px;
+  width: 30px;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+.Emoji-Attach span:hover {
+  transform: scale(1.25);
+  text-shadow: 0 0 10px white;
+}
+
+.Chat-Attach {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(39, 43, 48, 0.8);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Chat-Attach .chat-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bs5t);
+  border: 1px solid var(--bs6);
+  border-radius: 5px;
+  width: calc(100% - 37px);
+  max-width: 300px;
+  padding: 10px;
+  margin-bottom: 6px;
+  color: white;
+}
+.Chat-Attach .chat-preview .sender {
+  font-weight: bold;
+}
+.Chat-Attach .chat-preview .message .image {
+  position: relative;
+  background-color: var(--bs5);
+  max-width: 125px;
+  max-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+.Chat-Attach .chat-preview .message .image img {
+  max-width: 125px;
+  max-height: 70px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.Chat-Attach .cancelBtn {
+  width: calc(100% - 15px);
+  max-width: 322px;
+  background-color: black;
+  color: white;
+  padding: 3px 0;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.Chat-Attach .opt-preview {
+  display: flex;
+  width: calc(100% - 15px);
+  max-width: 322px;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.Chat-Attach .opt-preview button {
+  width: calc(33.3333333333% - 3px);
+  font-size: 14px;
+  color: white;
+  padding: 3px 0;
+  border-radius: 5px;
+}
+.Chat-Attach .opt-preview button:nth-child(1) {
+  background-color: var(--bs6);
+}
+.Chat-Attach .opt-preview button:nth-child(2) {
+  background-color: var(--bs3);
+}
+.Chat-Attach .opt-preview button:nth-child(3) {
+  background-color: var(--c-red);
+}
+.Chat-Attach .opt-preview.two button {
+  width: calc(50% - 2px);
+}
+.Chat-Attach .opt-preview.two button:nth-child(1) {
+  background-color: var(--bs6);
+}
+.Chat-Attach .opt-preview.two button:nth-child(2) {
+  background-color: var(--c-red);
+}
+.Chat-Attach .opt-preview.one button {
+  background-color: var(--bs6t);
+  width: 100%;
+}
+.Chat-Attach .image-preview {
+  max-width: 100px;
+  max-height: 100px;
+  margin-bottom: 10px;
+}
+.Chat-Attach .image-preview img {
+  max-width: 100px;
+  max-height: 100px;
+}
+.Chat-Attach .file-preview {
+  border: 1px solid var(--bs4);
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.Chat-Attach .file-preview p {
+  color: var(--bs4);
+  font-size: 12px;
+}
+.Chat-Attach .file-preview p i {
+  color: var(--bs4);
+}
+.Chat-Attach textarea {
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  width: 200px;
+  border-bottom: 2px solid var(--bs2);
+  resize: none;
+  margin-bottom: 10px;
+}
+.Chat-Attach .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 40px);
+  max-width: 200px;
+}
+.Chat-Attach .buttons button {
+  text-transform: uppercase;
+  width: calc(50% - 5px);
+  padding: 5px 0 7px 0;
+  color: white;
+  border-radius: 5px;
+}
+.Chat-Attach .buttons button:nth-child(1) {
+  background-color: black;
+}
+.Chat-Attach .buttons button:nth-child(2) {
+  background-color: var(--bs2);
+}
+
+.reply-preview {
+  background-color: var(--bs5t);
+  position: fixed;
+  right: 5px;
+  bottom: 50px;
+  left: 5px;
+  padding: 3px;
+  font-size: 12px;
+  border: 1px solid var(--bs2);
+  display: flex;
+  align-items: center;
+  color: black;
+}
+.reply-preview .line {
+  width: 4px;
+  height: 38px;
+  background-color: var(--bs3);
+  margin-right: 3px;
+  border-radius: 3px;
+}
+.reply-preview .re-image {
+  width: 38px;
+  height: 38px;
+  background-image: url(../../data/img/error_image.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-right: 3px;
+  border-radius: 3px;
+}
+.reply-preview .cancel-reply {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 18px;
+  background-color: transparent;
+  color: var(--bs2);
+}
+
+@-webkit-keyframes animationPackme {
+  0% {
+    transform: scale(0) translate(-110%, -75px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+@keyframes animationPackme {
+  0% {
+    transform: scale(0) translate(-110%, -75px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+@-webkit-keyframes animationPack {
+  0% {
+    transform: scale(0) translate(110%, -75px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+@keyframes animationPack {
+  0% {
+    transform: scale(0) translate(110%, -75px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+.dark {
+  --bs2: #ffe46e;
+}
+.dark header {
+  background-color: var(--bg3);
+}
+.dark header button {
+  color: white;
+}
+.dark footer .send-button {
+  background-color: var(--c-blue);
+  color: white;
+}
+.dark footer .inputs {
+  background-color: var(--bg2);
+  box-shadow: unset;
+}
+.dark footer .inputs button {
+  color: white;
+}
+.dark footer .inputs textarea {
+  color: white;
+}
+.dark footer .inputs textarea::-moz-placeholder {
+  color: #cccccc;
+}
+.dark footer .inputs textarea:-ms-input-placeholder {
+  color: #cccccc;
+}
+.dark footer .inputs textarea::placeholder {
+  color: #cccccc;
+}
+.dark main .scroll-button {
+  background-color: var(--bg3);
+}
+.dark main .show-all {
+  border: 1px solid var(--bg3);
+}
+.dark main .show-all.nopoint i {
+  color: var(--c-green);
+}
+.dark main .card-chat .sender .top button {
+  background-color: transparent;
+  color: white;
+}
+.dark main .card-chat .sender div.replied {
+  border-left: 2px solid var(--b-yellow);
+}
+.dark main .card-chat .sender div.replied .line {
+  background-color: #ffd483;
+}
+.dark main .card-chat .sender div.replied .from .re-name, .dark main .card-chat .sender div.replied .from .re-desc {
+  color: var(--c-yellow);
+}
+.dark main .card-chat .sender .middle .picture {
+  background-color: black;
+}
+.dark main .card-chat .sender .middle p .c-yellow {
+  color: var(--c-yellow);
+}
+.dark main .card-chat .sender .bottom p.time {
+  color: #cce1ff;
+}
+.dark main .card-chat.our {
+  background-color: var(--untai-kita);
+  color: unset;
+}
+.dark main .card-chat.their {
+  background-color: var(--bg2);
+  color: unset;
+}
+.dark .Emoji-Attach {
+  --bg2: #3f464eaa;
+  background-color: var(--bg2);
+  border: 2px solid var(--bg3);
+}
+.dark .Chat-Attach {
+  background-color: rgba(39, 43, 48, 0.8);
+}
+.dark .Chat-Attach .chat-preview {
+  background-color: var(--untai-kita);
+  border: 1px solid var(--c-blue);
+  color: unset;
+}
+.dark .Chat-Attach .chat-preview .message .image {
+  background-color: black;
+}
+.dark .Chat-Attach .cancelBtn {
+  background-color: var(--bg3);
+}
+.dark .Chat-Attach .opt-preview button:nth-child(1) {
+  background-color: var(--b-green);
+}
+.dark .Chat-Attach .opt-preview button:nth-child(2) {
+  background-color: var(--b-yellow);
+}
+.dark .Chat-Attach .opt-preview button:nth-child(3) {
+  background-color: var(--c-red);
+}
+.dark .Chat-Attach .opt-preview.two button {
+  width: calc(50% - 2px);
+}
+.dark .Chat-Attach .opt-preview.two button:nth-child(1) {
+  background-color: var(--b-green);
+}
+.dark .Chat-Attach .opt-preview.two button:nth-child(2) {
+  background-color: var(--c-red);
+}
+.dark .Chat-Attach .image-preview {
+  max-width: 100px;
+  max-height: 100px;
+  margin-bottom: 10px;
+}
+.dark .Chat-Attach .image-preview img {
+  max-width: 100px;
+  max-height: 100px;
+}
+.dark .Chat-Attach .file-preview {
+  border: 1px solid var(--c-yellow);
+}
+.dark .Chat-Attach .file-preview p {
+  color: var(--c-yellow);
+}
+.dark .Chat-Attach .file-preview p i {
+  color: var(--c-yellow);
+}
+.dark .Chat-Attach textarea {
+  border-bottom: 2px solid var(--c-blue);
+}
+.dark .Chat-Attach .buttons button:nth-child(1) {
+  background-color: var(--c-red);
+}
+.dark .Chat-Attach .buttons button:nth-child(2) {
+  background-color: var(--b-green);
+}
+.dark .reply-preview {
+  background-color: var(--bg2);
+  border: 1px solid var(--c-yellow);
+  color: white;
+}
+.dark .reply-preview .line {
+  background-color: #ffd483;
+}
+.dark .reply-preview .cancel-reply {
+  color: var(--c-yellow);
+}

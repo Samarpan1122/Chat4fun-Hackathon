@@ -1,0 +1,101 @@
+.container {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  background-color: var(--bs6);
+}
+h1 button {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 0;
+  font-size: 24px;
+  background-color: transparent;
+  color: var(--bs1);
+  cursor: pointer;
+}
+
+.form {
+  position: relative;
+  height: calc(100% - 43px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.form .User-picture {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 150px;
+  background-image: url(../../data/img/profile.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.form .User-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form .User-link {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.form .User-link button {
+  background-color: var(--bs3);
+  color: white;
+  margin: 3px 5px;
+  border-radius: 5px;
+  padding: 3px 7px;
+}
+.form .bio {
+  width: calc(100% - 20px);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.form .bio p {
+  max-width: 400px;
+  text-align: left;
+  word-break: break-all;
+  word-break: break-word;
+}
+.form .buttons {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  width: 125px;
+}
+.form .buttons button {
+  width: 150px;
+  padding: 3px 0;
+  border-radius: 3px;
+  background-color: var(--bs3);
+  color: white;
+  font-weight: bold;
+}
+
+.dark h1 {
+  background-color: var(--bg2);
+}
+.dark h1 button {
+  color: white;
+}
+.dark .form .User-link button {
+  background-color: #1b1b1b;
+  color: white;
+}
+.dark .form .buttons button {
+  background-color: var(--b-green);
+}

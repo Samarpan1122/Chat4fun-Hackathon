@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login/Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #005678;
+    }
+    
+    h1 {
+      margin-top: 50px;
+      color: #333;
+    }
+    
+    .button-container {
+      margin-top: 30px;
+    }
+    
+    .button {
+      background-color: #112b48;
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #366eef;
+    }
+    .button {
+      max-height: fit-content;
+    max-width: fit-content;
+    padding: 20px 20px;
+            display: inline-block;
+            color: #fcfcfc;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 1.5em;
+            overflow: hidden;
+    }
+    
+    .button:hover {
+      color: #112b48;
+            background: white;
+            box-shadow: 0 0 50px white;
+            color: #112b48;
+    }
+  </style>
+</head>
+<body>
+  <img src="/Online/data/img/Chat4fun-logos_transparent.png" alt="Chat4fun" width="200" height="200">
+  <h1 style="color: aliceblue;">Welcome To Chat4fun!</h1>
+  <p style="color: aliceblue;">Chat4fun is a free online chat room service. You can chat with anyone in the world!, You can also create your own chat room and invite your friends to chat with you,cyberbullying,abusive lang,racism related text and other inappropriate text free website,end-to-end encrypted!</p>
+  
+  <div class="button-container">
+    <button class="button" onclick="SignUp()">Sign Up</button>
+    <button class="button" onclick="Login()">Login</button>
+  </div>
+  
+  <script>
+    function SignUp() {
+      window.location.href = "/Online/signupOn.html"
+    }
+    
+    function Login() {
+      window.location.href = "/Online/dashboard/"
+    }
+    
+  </script>
+</body>
+</html>

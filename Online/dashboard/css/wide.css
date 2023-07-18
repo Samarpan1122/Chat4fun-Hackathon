@@ -1,0 +1,152 @@
+@media (min-width: 850px) {
+  header {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: unset;
+    width: 400px;
+    height: 100%;
+    background-color: var(--bs6);
+  }
+  header .menu-bar {
+    z-index: 1;
+    top: 50px;
+    right: 0;
+    left: 0;
+    height: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 2px solid var(--bs2);
+    border-bottom: 2px solid var(--bs2);
+  }
+  header .menu-bar button {
+    width: unset;
+    height: 75px;
+    border-left: 10px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: unset;
+    transition: 0.25s;
+  }
+  header .menu-bar button.enabled {
+    border-left: 50px solid var(--bs1);
+    border-right: 2px solid var(--bs1);
+    border-bottom: unset;
+  }
+  header .menu-bar button.enabled:hover {
+    border-bottom: unset;
+  }
+  footer {
+    z-index: 1;
+    background-color: var(--bs6);
+    position: fixed;
+    right: unset;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: calc(100% - 355px);
+    -webkit-animation: animationFooter 0.5s;
+            animation: animationFooter 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  footer button {
+    padding: 3px 3px 5px 3px;
+    float: left;
+    margin-left: unset;
+    border-radius: 5px;
+    width: calc(50% - 50px);
+    background-color: var(--bs3);
+  }
+  main {
+    overflow: hidden;
+    -webkit-animation: animationPageWide 0.5s;
+            animation: animationPageWide 0.5s;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 400px;
+  }
+  main .card-list, main .card-find {
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  main .card-list .card.post, main .card-find .card.post {
+    -webkit-animation: CardAnim 1s;
+            animation: CardAnim 1s;
+    width: calc(100% - 20px);
+    max-width: 750px;
+  }
+  main.deleted {
+    -webkit-animation: aniPageWide 0.5s;
+            animation: aniPageWide 0.5s;
+  }
+  @-webkit-keyframes animationPageWide {
+    0% {
+      transform: translate(0, 100%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes animationPageWide {
+    0% {
+      transform: translate(0, 100%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  @-webkit-keyframes aniPageWide {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(0, -100%);
+    }
+  }
+  @keyframes aniPageWide {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(0, -100%);
+    }
+  }
+  .Comment-section {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+  }
+  .dark header {
+    background-color: var(--bg2);
+  }
+  .dark header .menu-bar {
+    background-color: var(--bg2);
+    border-top: 2px solid var(--bg3);
+    border-bottom: 2px solid var(--bg3);
+  }
+  .dark header .menu-bar button.enabled {
+    border-left: 50px solid var(--c-blue);
+    border-right: 2px solid var(--c-blue);
+  }
+  .dark footer {
+    background-color: unset;
+  }
+  .dark footer button {
+    background-color: var(--bg3);
+  }
+}

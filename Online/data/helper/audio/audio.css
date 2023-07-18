@@ -1,0 +1,137 @@
+:root {
+    --dAudioBg: #73bda8;
+    --dAudioPlay: #cc6b49;
+    --dAudioPause: #cc6b49;
+    --dAudioStop: #cc6b49;
+    --dAudioThumb: #cc6b49;
+    --dAudioTrack: #ebe8dc;
+    --dAudioText: black;
+}
+
+.dark {
+    --dAudioBg: #272b30;
+    --dAudioPlay: var(--c-blue);
+    --dAudioPause: var(--c-blue);
+    --dAudioStop: var(--c-blue);
+    --dAudioThumb: var(--c-blue);
+    --dAudioTrack: var(--bg2);
+    --dAudioText: #ffffff;
+}
+
+chatroom-audio {
+    width: 200px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--dAudioBg);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+chatroom-audio * {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+chatroom-audio input[type="range"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    background-color: var(--dAudioTrack);
+    height: 5px;
+}
+chatroom-audio input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: var(--dAudioThumb);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+chatroom-audio input[type=range]::-ms-thumb {
+    background: var(--dAudioThumb);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+chatroom-audio input[type=range]::-moz-range-thumb {
+    background: var(--dAudioThumb);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+chatroom-audio.rectangle input[type="range"]::-webkit-slider-thumb {
+    height: 14px;
+    width: 8px;
+    border-radius: 2px;
+}
+chatroom-audio.square input[type="range"]::-webkit-slider-thumb {
+    border-radius: 3px;
+}
+
+chatroom-audio .play {
+    cursor: pointer;
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 17px solid var(--dAudioPlay);
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+chatroom-audio .play:after {
+    content: "";
+    opacity: 0;
+    transition: opacity 0.6s;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+}
+chatroom-audio .play.active {
+  border-color: transparent;
+}
+chatroom-audio .play.active:after {
+    content: "";
+    opacity: 1;
+    width: 12px;
+    height: 20px;
+    background: var(--dAudioPlay);
+    position: absolute;
+    right: 0;
+    top: -10px;
+    border-left: 5px solid var(--dAudioPlay);
+    box-shadow: inset 7px 0 0 0 var(--dAudioBg);
+}
+chatroom-audio .pause:active {
+    transform: scale(0.9);
+}
+chatroom-audio .pause {
+    width: 20px;
+    height: 20px;
+    background-color: var(--dAudioStop);
+    cursor: pointer;
+}
+chatroom-audio .duration {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7px;
+}
+chatroom-audio .time {
+    margin-top: 3px;
+    color: var(--dAudioText);
+}

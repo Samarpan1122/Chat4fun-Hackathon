@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <meta name="google-translate-customization" content="a648e4b2b9009c0f-ca96432aba1106ac-gb7380bc44e8f6cea-10">
+    <link rel="stylesheet" href="signupOn.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+    <script type="module" src="signupOn.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Sign Up</h1>
+    </header>
+    <form >
+        <label for="name" style="color: aliceblue;">Username:</label>
+        <input type="text" id="name" placeholder="Type your name" name="name" required>
+        <label for="email" style="color: aliceblue;">Email:</label>
+        <input type="email" id="email" placeholder="Type your email" name="email" required>
+        <label for="password" style="color: aliceblue;">Password:</label>
+        <input type="password" id="password" placeholder="Type your password" name="password" required>
+        
+        <p style="color: aliceblue;">If you have a registered account pease login <a href="loginOn.html">here</a>.</p>
+        <button type="submit" id="submitBtn" >Submit</button>
+
+      
+    </form>
+</body>
+</html>

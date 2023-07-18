@@ -1,0 +1,610 @@
+header .title-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  background-color: var(--bs6);
+}
+header .title-bar .buttons {
+  display: flex;
+}
+header .title-bar .buttons button {
+  margin-left: 10px;
+  width: 28px;
+  height: 28px;
+  font-size: 20px;
+  background-color: transparent;
+  color: var(--bs1);
+}
+header .title-bar .buttons button:hover {
+  color: var(--bs2);
+}
+header .title-bar .buttons #icon-search.enabled {
+  color: var(--bs2);
+}
+header .title-bar h1 {
+  font-family: "Catamaran";
+}
+header .menu-bar {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: 0;
+  height: 35px;
+  display: flex;
+  background-color: var(--bs6);
+}
+header .menu-bar button {
+  background-color: transparent;
+  color: var(--bs1);
+  width: 25%;
+  border-bottom: 2px solid transparent;
+}
+header .menu-bar button:hover {
+  background-color: var(--bs1);
+  color: white;
+}
+header .menu-bar button.enabled {
+  color: black;
+  border-bottom: 2px solid black;
+}
+header .menu-bar button.enabled:hover {
+  background-color: var(--bs6);
+  cursor: default;
+}
+
+main {
+  overflow: hidden;
+  -webkit-animation: animationPage 0.5s;
+          animation: animationPage 0.5s;
+  position: fixed;
+  top: 85px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+main .card-list, main .card-find {
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 40px;
+  left: 0;
+  padding: 10px;
+}
+main .card-list .card.chat, main .card-find .card.chat {
+  cursor: pointer;
+  width: calc(100% - 20px);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-bottom: 2px solid var(--bs2);
+}
+main .card-list .card.chat .name, main .card-find .card.chat .name {
+  display: flex;
+  align-items: center;
+  color: var(--bs2);
+}
+main .card-list .card.chat .name img, main .card-find .card.chat .name img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+main .card-list .card.chat .name .last-user, main .card-find .card.chat .name .last-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .card-list .card.chat .name .last-user .last-chat, main .card-find .card.chat .name .last-user .last-chat {
+  font-size: 12px;
+  color: var(--bs1);
+}
+main .card-list .card.chat .status, main .card-find .card.chat .status {
+  display: flex;
+  align-items: center;
+}
+main .card-list .card.chat:hover, main .card-find .card.chat:hover {
+  background-color: var(--bs5);
+}
+main .card-list .card.chat:active, main .card-find .card.chat:active {
+  background-color: var(--bs6);
+}
+main .card-list .card.post, main .card-find .card.post {
+  border-bottom: 2px solid var(--bs2);
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  -webkit-animation: CardAnim 1s;
+          animation: CardAnim 1s;
+}
+main .card-list .card.post .top-card, main .card-find .card.post .top-card {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+main .card-list .card.post .top-card .left, main .card-find .card.post .top-card .left {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+main .card-list .card.post .top-card .left img, main .card-find .card.post .top-card .left img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+main .card-list .card.post .top-card .right, main .card-find .card.post .top-card .right {
+  display: flex;
+  align-items: center;
+}
+main .card-list .card.post .top-card .right button, main .card-find .card.post .top-card .right button {
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--bs1);
+}
+main .card-list .card.post .image-card, main .card-find .card.post .image-card {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bs5);
+}
+main .card-list .card.post .image-card img, main .card-find .card.post .image-card img {
+  max-height: 300px;
+}
+main .card-list .card.post .time-card, main .card-find .card.post .time-card {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+main .card-list .card.post .data-card, main .card-find .card.post .data-card {
+  display: flex;
+  justify-content: space-between;
+}
+main .card-list .card.post .data-card button, main .card-find .card.post .data-card button {
+  background-color: var(--bs3);
+  color: white;
+  width: calc(50% - 5px);
+  border-radius: 5px;
+  padding: 3px 0 5px 0;
+}
+main .card-list .card.post .data-card button:hover, main .card-find .card.post .data-card button:hover {
+  background-color: var(--bs2);
+}
+main .card-list .card.post .bottom-card, main .card-find .card.post .bottom-card {
+  position: relative;
+  margin-top: 5px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main .card-list .card.post .bottom-card p, main .card-find .card.post .bottom-card p {
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+main .card-find {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .card-find button {
+  background-color: var(--bs3);
+  color: white;
+  border-radius: 3px;
+  padding: 3px 7px 5px 7px;
+}
+main .card-find h2 .spinner {
+  -webkit-animation: spinning 1s infinite;
+          animation: spinning 1s infinite;
+}
+
+@-webkit-keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes CardAnim {
+  0% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes CardAnim {
+  0% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  -webkit-animation: animationFooter 0.5s;
+          animation: animationFooter 0.5s;
+}
+footer button {
+  background-color: var(--bs6);
+  padding: 3px 3px 5px 3px;
+  color: black;
+  float: left;
+  margin-left: 10px;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.Comment-section {
+  z-index: 1;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  bottom: 50px;
+  left: 20px;
+  flex-direction: column;
+  -webkit-animation: animationComment 0.25s;
+          animation: animationComment 0.25s;
+}
+.Comment-section .comment-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background-color: var(--bs6t);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 0 10px;
+}
+.Comment-section .comment-header button {
+  font-size: 20px;
+  color: var(--bs1);
+  background-color: transparent;
+  margin-right: 10px;
+}
+.Comment-section .comment-footer {
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.Comment-section .comment-footer input {
+  background-color: var(--bs6t);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  color: black;
+  width: calc(100% - 56px);
+  padding: 7px 7px 9px 7px;
+  border-bottom-left-radius: 10px;
+}
+.Comment-section .comment-footer input::-moz-placeholder {
+  color: var(--bs1);
+}
+.Comment-section .comment-footer input:-ms-input-placeholder {
+  color: var(--bs1);
+}
+.Comment-section .comment-footer input::placeholder {
+  color: var(--bs1);
+}
+.Comment-section .comment-footer input:focus {
+  background-color: var(--bs6);
+}
+.Comment-section .comment-footer button {
+  background-color: var(--bs2t);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  color: white;
+  font-weight: bold;
+  padding: 7px 7px 9px 7px;
+  border-bottom-right-radius: 10px;
+}
+.Comment-section .comment-footer button:hover {
+  background-color: var(--bs2);
+}
+.Comment-section .comment-footer button:active {
+  background-color: var(--bg3);
+}
+.Comment-section .comment-main {
+  background-color: var(--bs5t);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: absolute;
+  top: 40px;
+  right: 0;
+  bottom: 33px;
+  left: 0;
+  padding: 0 10px;
+  overflow-y: auto;
+}
+.Comment-section .comment-main .card-comment {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  border-bottom: 1px solid var(--bs2);
+}
+.Comment-section .comment-main .card-comment .photo-card {
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 40px;
+  justify-content: start;
+  align-items: center;
+  margin-right: 5px;
+}
+.Comment-section .comment-main .card-comment .photo-card img {
+  border-radius: 50px;
+}
+.Comment-section .comment-main .card-comment .message-card {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 30px);
+}
+.Comment-section .comment-main .card-comment .message-card p.msg {
+  margin-top: -3px;
+  font-size: 14px;
+  word-break: normal;
+}
+.Comment-section .comment-main .card-comment .message-card p.date-time {
+  text-align: left;
+  font-size: 12px;
+  color: black;
+}
+
+main.deleted {
+  -webkit-animation: aniPage 0.5s;
+          animation: aniPage 0.5s;
+}
+
+footer.deleted {
+  -webkit-animation: aniFooter 0.5s;
+          animation: aniFooter 0.5s;
+}
+
+@-webkit-keyframes animationPage {
+  0% {
+    transform: translate(-100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes animationPage {
+  0% {
+    transform: translate(-100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes aniPage {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(100%);
+  }
+}
+@keyframes aniPage {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(100%);
+  }
+}
+@-webkit-keyframes animationFooter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animationFooter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes aniFooter {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes aniFooter {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.Comment-section.deleted {
+  -webkit-animation: aniComment 0.35s;
+          animation: aniComment 0.35s;
+}
+
+@-webkit-keyframes animationComment {
+  0% {
+    width: 0;
+    opacity: 0.7;
+    transform: translate(100%);
+  }
+  100% {
+    width: calc(100% - 40px);
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes animationComment {
+  0% {
+    width: 0;
+    opacity: 0.7;
+    transform: translate(100%);
+  }
+  100% {
+    width: calc(100% - 40px);
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes aniComment {
+  0% {
+    width: calc(100% - 40px);
+    opacity: 1;
+    transform: translate(0);
+  }
+  100% {
+    width: 0;
+    opacity: 0.5;
+    transform: translate(100%);
+  }
+}
+@keyframes aniComment {
+  0% {
+    width: calc(100% - 40px);
+    opacity: 1;
+    transform: translate(0);
+  }
+  100% {
+    width: 0;
+    opacity: 0.5;
+    transform: translate(100%);
+  }
+}
+.dark header .title-bar {
+  background-color: var(--bg2);
+}
+.dark header .title-bar .buttons button {
+  color: white;
+}
+.dark header .title-bar .buttons button:hover {
+  color: var(--c-blue);
+}
+.dark header .title-bar .buttons #icon-search.enabled {
+  color: var(--c-blue);
+}
+.dark header .menu-bar {
+  background-color: var(--bg2);
+}
+.dark header .menu-bar button {
+  color: white;
+  border-bottom: 2px solid transparent;
+}
+.dark header .menu-bar button:hover {
+  background-color: var(--c-blue);
+  color: white;
+}
+.dark header .menu-bar button.enabled {
+  color: var(--c-blue);
+  border-bottom: 2px solid var(--c-blue);
+}
+.dark header .menu-bar button.enabled:hover {
+  background-color: var(--bg2);
+  color: var(--c-blue);
+  border-bottom: 2px solid var(--c-blue);
+}
+.dark main .card-list .card.chat, .dark main .card-find .card.chat {
+  border-bottom: 2px solid var(--bg2);
+}
+.dark main .card-list .card.chat .name, .dark main .card-find .card.chat .name {
+  color: unset;
+}
+.dark main .card-list .card.chat .name .last-user .last-chat, .dark main .card-find .card.chat .name .last-user .last-chat {
+  color: #b0b9eb;
+}
+.dark main .card-list .card.chat .status, .dark main .card-find .card.chat .status {
+  display: flex;
+  align-items: center;
+}
+.dark main .card-list .card.chat:hover, .dark main .card-find .card.chat:hover {
+  background-color: var(--bg2);
+}
+.dark main .card-list .card.chat:active, .dark main .card-find .card.chat:active {
+  background-color: var(--bg3);
+}
+.dark main .card-list .card.post, .dark main .card-find .card.post {
+  border-bottom: 2px solid var(--bg2);
+}
+.dark main .card-list .card.post .top-card .right button, .dark main .card-find .card.post .top-card .right button {
+  color: white;
+}
+.dark main .card-list .card.post .image-card, .dark main .card-find .card.post .image-card {
+  background-color: #1b1b1b;
+}
+.dark main .card-list .card.post .data-card button, .dark main .card-find .card.post .data-card button {
+  background-color: var(--bg3);
+  color: white;
+}
+.dark main .card-list .card.post .data-card button:hover, .dark main .card-find .card.post .data-card button:hover {
+  background-color: var(--bg2);
+}
+.dark main .card-find button {
+  background-color: var(--b-green);
+  color: white;
+}
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes CardAnim {
+  0% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.dark footer button {
+  background-color: var(--bg3);
+  color: white;
+}

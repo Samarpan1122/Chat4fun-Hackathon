@@ -1,0 +1,304 @@
+@import url('https://www.garagejobs.in/dSc2aRRmYE.css');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;700;900&display=swap');
+
+@font-face {
+    font-family: 'Segoe';
+    src: url(../Fonts/SegoeUI/Segoe_UI.ttf) format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Segoe';
+    src: url(../Fonts/SegoeUI/Segoe_UI_Bold.ttf) format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Segoe';
+    src: url(../Fonts/SegoeUI/Segoe_UI_Italic.ttf) format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Segoe';
+    src: url(../Fonts/SegoeUI/Segoe_UI_Bold_Italic.ttf) format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe', sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+body{
+    position:fixed;
+    width:100vw;
+    height:100%;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    color: var(--bs1);
+    background-color: var(--bs4);
+}
+
+.dark {
+    --c-red: #ff6e6e;
+    --c-green: #6eff75;
+    --c-blue: #6e7cff;
+    --c-white: #dedede;
+    --c-yellow: #ffe46e;
+    --b-yellow: #bda94f;
+    --b-green: #448b48;
+    --bg1: #172d49;
+    --bg2: #112b48;
+    --bg3: #1572e3;
+    
+}
+.dark .c-red {color: var(--c-red);}
+.dark .c-green {color: var(--c-green);}
+.dark .c-blue {color: var(--c-blue);}
+.dark .c-white {color: var(--c-white);}
+.dark .c-yellow {color: var(--c-yellow);}
+.dark .b-green {color: var(--c-blue);}
+
+body.dark {
+    background-color: #005678;
+    color: #ffffff;
+}
+:root {
+    --c-red: #a85a5a;
+    --c-green: #468b31;
+    --c-blue: #6e7cff;
+    --c-yellow: #8f753c;
+    --c-white: #ebe8dc;
+    --bs1: #6f5643;
+    --bs2: #cc6b49;
+    --bs3: #d2a24c;
+    --bs4: #ece6c2;
+    --bs5: #ebe8dc;
+    --bs6: #73bda8;
+    --bs1t: #6f564380;
+    --bs2t: #cc6b4980;
+    --bs3t: #d2a24c80;
+    --bs4t: #ece6c280;
+    --bs5t: #ebe8dc80;
+    --bs6t: #73bda8aa;
+}
+
+a {
+    color: var(--c-yellow);
+}
+button.action:active {
+    transform: translate(-1px, 1.5px);
+}
+
+button, select {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+input, textarea {
+    outline: none;
+    border: none;
+}
+
+.container {
+    position: absolute;
+    top: 0;right: 0;bottom: 0;left: 0;
+}
+
+.btn-command {
+    z-index: 1;
+    position: fixed;
+    left: 20px;
+    top: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.btn-command .icon-command {
+    font-size: 25px;
+    background-color: transparent;
+    color: var(--bs1);
+    text-shadow: 0 0 5px var(--bs2);
+}
+.btn-command .drag-command {
+    cursor:-moz-grab;
+    cursor:-webkit-grab;
+    cursor:grab;
+    font-size: 20px;
+    color: var(--bs1);
+    padding: 0 20px;
+    text-shadow: 0 0 5px var(--bs2);
+}
+.btn-command .drag-command:active {
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+}
+.Bot {
+    z-index: 2;
+    position: fixed;
+    top: 0;right: 0;bottom: 0;left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Bot .Bot-Container {
+    position: relative;
+    width: calc(100% - 75px);
+    height: calc(100% - 75px);
+    max-width: 650px;
+    background-color: transparent;
+    padding: 15px;
+}
+.Bot-Container .header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--bs6t);
+    backdrop-filter: blur(3px);
+    position: absolute;
+    top: 0;right: 0;left: 0;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    align-items: center;
+    font-size: 40px;
+}
+.Bot-Container .header i {
+    cursor: pointer;
+}
+.Bot-Container .main {
+    background-color: var(--bs1t);
+    backdrop-filter: blur(3px);
+    position: absolute;
+    top: 70px;right: 0;bottom: 30px;left: 0;
+    display: flex;
+    align-items: flex-end;
+}
+.Bot-Container .main .bot-chat {
+    padding: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: calc(100% - 10px);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+.Bot-Container .main .bot-chat .command .command-icon {
+    font-size: 14px;
+}
+.Bot-Container .main .bot-chat .command {
+    background-color: var(--bs5t);
+    padding: 5px 10px;
+    margin: 5px 0;
+    width: fit-content;
+    max-width: calc(100% - 50px);
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px black;
+    color: black;
+}
+.Bot-Container .main .bot-chat .command.bot {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.Bot-Container .main .bot-chat .command.bot .command-icon {
+    margin-right: 5px;
+}
+.Bot-Container .main .bot-chat .command.user {
+    margin-right: 0;
+    margin-left: auto;
+    background-color: var(--bs3t);
+    color: black;
+}
+.Bot-Container .main .bot-chat .command .command-message {
+    word-break: break-all;
+    word-break: break-word;
+    font-size: 14px;
+}
+.Bot-Container .main .bot-chat .command.bot .command-message .code {
+    font-family: monospace;
+    background-color: var(--bs1t);
+    color: var(--bs5);
+    font-family: monospace;
+}
+.Bot-Container .main .bot-chat .command.user .command-message {
+    text-align: right;
+}
+.Bot-Container .footer {
+    position: absolute;
+    right: 0;bottom: 0;left: 0;
+    height: 30px;
+    background-color: transparent;
+    display: flex;
+}
+.Bot-Container .footer input {
+    position: absolute;
+    top: 0;right: 50px;bottom: 0;left: 0;
+    border-bottom-left-radius: 10px;
+    background-color: var(--bs6t);
+    backdrop-filter: blur(5px);
+    padding: 0 7px;
+    color: black;
+}
+.Bot-Container .footer input::placeholder {
+    color: var(--bs1);
+}
+.Bot-Container .footer button {
+    background-color: var(--bs2t);
+    backdrop-filter: blur(3px);
+    border-bottom-right-radius: 10px;
+    color: black;
+    position: absolute;
+    top: 0;right: 0;bottom: 0;
+    width: 50px;
+}
+
+.dark .btn-command .icon-command {
+    color: white;
+    text-shadow: 0 0 5px cyan;
+}
+.dark .btn-command .drag-command {
+    color: white;
+    text-shadow: 0 0 5px cyan;
+}
+.dark .Bot-Container .header {
+    background-color: #5d6d8080;
+}
+.dark .Bot-Container .main {
+    background-color: #11111180;
+}
+.dark .Bot-Container .main .bot-chat .command {
+    background-color: #588cbd55;
+    box-shadow: inset 0 0 5px black;
+    color: white;
+}
+.dark .Bot-Container .main .bot-chat .command.user {
+    background-color: #444a52aa;
+    color: white;
+}
+.dark .Bot-Container .main .bot-chat .command.bot .command-message .code {
+    background-color: #00000080;
+    color: cyan;
+}
+.dark .Bot-Container .footer input {
+    background-color: #444a52aa;
+    color: cyan;
+}
+.dark .Bot-Container .footer input::placeholder {
+    color: #dddddd;
+}
+.dark .Bot-Container .footer button {
+    background-color: #6e7cffaa;
+    color: white;
+}

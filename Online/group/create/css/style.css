@@ -1,0 +1,152 @@
+.container {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  background-color: var(--bs6);
+  padding-bottom: 7px;
+}
+h1 button {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 0;
+  font-size: 24px;
+  background-color: transparent;
+  color: var(--bs1);
+  cursor: pointer;
+}
+
+.form {
+  position: relative;
+  height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form .Group-picture {
+  position: relative;
+  width: 175px;
+  height: 175px;
+  background-image: url(../../../data/img/group.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.form .Group-picture .Group-picture-edit {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  background-color: transparent;
+  color: white;
+  font-size: 24px;
+  opacity: 0.75;
+}
+.form .Group-picture .Group-picture-edit i {
+  text-shadow: 0 0 2px black;
+}
+.form .Group-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form .Group-name input {
+  background-color: transparent;
+  border-bottom: 2px solid var(--bs2);
+  color: black;
+  padding: 0 5px 5px 5px;
+  margin: 10px 0 20px 0;
+  width: 165px;
+}
+.form .bio {
+  width: calc(100% - 20px);
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.form .bio p {
+  text-align: justify;
+}
+.form .buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 175px;
+}
+.form .buttons button {
+  text-transform: uppercase;
+  width: calc(50% - 3px);
+  padding: 3px 0 5px 0;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.form .buttons button:nth-child(1) {
+  background-color: black;
+  color: white;
+}
+.form .buttons button:nth-child(2) {
+  background-color: var(--bs3);
+  color: white;
+}
+.form .buttons.one {
+  justify-content: center;
+}
+.form .buttons.one button {
+  width: 100%;
+  background-color: var(--bs3);
+  color: white;
+}
+
+.Uploader {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(33, 40, 48, 0.8);
+  color: white;
+}
+.Uploader h1, .Uploader h2 {
+  background-color: transparent;
+}
+
+.dark h1 {
+  background-color: var(--bg2);
+}
+.dark h1 button {
+  color: white;
+}
+.dark .form .Group-name input {
+  border-bottom: 2px solid var(--c-blue);
+  color: white;
+}
+.dark .form .buttons button:nth-child(1) {
+  background-color: var(--c-red);
+}
+.dark .form .buttons button:nth-child(2) {
+  background-color: var(--b-green);
+}
+.dark .form .buttons.one {
+  justify-content: center;
+}
+.dark .form .buttons.one button {
+  background-color: var(--b-green);
+}
+.dark .Uploader {
+  background-color: rgba(33, 40, 48, 0.8);
+  color: white;
+}
+.dark .Uploader h1, .dark .Uploader h2 {
+  background-color: transparent;
+}
