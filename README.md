@@ -31,7 +31,7 @@ To run LAN version:
 6. Enter the IP address of the server
 7. Chat without internet and safe
 
-For explanation of code click here: open hackathon.pptx or open hackathon.pdf 
+For explanation of Website: open hackathon.pptx or open hackathon.pdf 
 
 Made by:
 - Samarpan Mohanty(Leader) 
