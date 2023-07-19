@@ -34,7 +34,7 @@ To run LAN version:
 For explanation of Website: open hackathon.pptx or open hackathon.pdf 
 
 Made by:
-- Samarpan Mohanty(Leader) 
+- Samarpan Mohanty
 - Class: 12
 - School: Delhi Public School, Faridabad, Haryana, India
 - for any queries contact on samarpanmohanty3347@chat4fun.tech or samarpanmohanty3347@gmail.com
