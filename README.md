@@ -1,4 +1,4 @@
-For Hacakthon (Syntax v7.1)
+For Hacakthon
 Simple fun and safe Chatting app for friends.
 
 ## Features
