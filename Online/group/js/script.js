@@ -3,6 +3,7 @@ import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/
 import { getDatabase, ref, set, remove, get } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
 import { firebaseConfig } from '../../data/js/config.js';
 import { getID } from "/Online/data/js/authState.js";
+
 (() => {
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
